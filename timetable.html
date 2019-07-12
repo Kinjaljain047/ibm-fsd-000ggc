@@ -1,0 +1,87 @@
+<html>
+    <head>
+        <title>
+            Time-Table
+        </title>
+        <script type="text/javascript" src="timetable.js"></script>
+    </head>
+        <body>
+            <div>
+                <fieldset><legend>Trainer Details</legend>
+                    <form></form>
+            <table>
+                <tbody>
+                    <tr>
+                        <th><label>Trainer Name</label></th>
+                        <td>
+                            <input type="text" name="fname" id="tn1" placeholder="name" maxlen="10"/>
+                        </td>
+                    
+                    </tr>
+                    <tr>
+                    <th><label>Skill Set</label></th>
+                    <td>
+                        <select id="searchBy">
+                            <option value="">search</option>
+                            <option value="eng">eng</option>
+                            <option value="hin">hin</option>
+                            <option value="sci">sci</option>
+                            <option value="math">math</option>
+                        </td>
+                </tr>
+                <tr>
+                    <th><label>Time-Slot</label></th>
+                    <td>
+                            <select id="search">
+                                    <option value="">search</option>
+                                    <option value="9am-10am" >9am-10am</option>
+                                    <option value="10am-11am">10am-11am</option>
+                                    <option value="12pm-1pm">12pm-1pm</option>
+                                    <option value="1pm-2pm">1pm-2pm</option>
+                    </td>
+                </tr>
+                </thead>
+            </table>
+            <tr>
+                <th><input type="button" value="ENTER" id="ent" onclick="gettrainer()"/></th>
+            </tr>
+            </fieldset>
+        </div>
+        <div>
+            <fieldset><legend>Timetable</legend>
+                <input type="text" id="criteria" value="class" id="cls"/>
+                <select id="searchBy" onchange="gettable()">
+                <option value="">search</option>
+                <option value="classA">CLASS A</option>
+                <option value="classB">CLASS B</option>
+               </select>
+               <table>
+                   <thead>
+                       <tr>
+                           <th><input type="text" value="sub" id="sub" readonly/></th>
+                           <th><input type="text" value="maths" id="math"/></th>
+                           <th><input type="text" value="science" id="sci"/></th>
+                           <th><input type="text" value="hindi" id="hin"/></th>
+                           <th><input type="text" value="english" id="eng"/></th>
+                         </tr>
+                         <tr>
+                             <th><input type="text" value="time" id="tim" readonly/></th>
+                             <th><input type="time" id="t1" /></th>
+                             <th><input type="time" id="t2"/></th>
+                             <th><input type="time" id="t3"/></th>
+                             <th><input type="time" id="t4"/></th>
+                         </tr>
+                         <tr>
+                             <th><input type="text" value="trainer name" id="train" readonly/></th>
+                             <th><input type="text" id="T1"/></th>
+                             <th><input type="text" id="T2"/></th>
+                             <th><input type="text" id="T3"/></th>
+                             <th><input type="text" id="T4"/></th>
+                            </tr>
+                   </thead>
+               </table>
+            </fieldset>
+        </div>
+        </body>
+    </div>
+</html>

@@ -1,0 +1,143 @@
+<html>
+
+<head>
+    <title>
+        CAKE SHOPPING
+    </title>
+    <meta name="description" content="this is the description">
+    <script type="text/javascript">
+        function redirect() {
+            window.location = "file:///C:/Users/KinjalJain/Documents/shopping/checkout.html";
+        }
+
+        const _add = (i) => {
+            const baseurl = 'http://localhost:3369/item/display';
+            fetch(baseurl)
+                .then(items => items.json())
+                .then(items => {
+                    const arr = items.items.forEach(u => {
+
+                    });
+                    if (u.id == i) {
+                        console.log(' ' + u.name);
+                        console.log(' ' + u.cost);
+                        console.log(' ' + u.quantity);
+                    }
+                });
+
+        };
+    </script>
+    <style>
+        .hh1 {
+            font-size: 44px;
+            color: darkblue;
+            font-style: oblique;
+            text-align: center
+        }
+        
+        .h_2 {
+            font-size: 24px;
+            color: darkred;
+            font-style: italic;
+        }
+        
+        .i_mg {
+            height: 250px;
+            margin: 20px;
+        }
+        
+        .shop-item {
+            margin-left: 600px;
+        }
+        
+        .shop-items {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin: 200px;
+        }
+        
+        .s_2 {
+            display: flex;
+            align-items: right;
+            padding: 5px;
+        }
+        
+        .bt_n {
+            color: white;
+            background-color: #56CCF2;
+            border: none;
+            border-radius: .3em;
+            font-weight: bold;
+            font-size: 16px;
+            margin-left: 100px;
+        }
+        
+        .d_2 {
+            float: right;
+        }
+        
+        .ma_in {
+            background-color: lightpink;
+        }
+        
+        .p_1 {
+            font-size: 22px;
+        }
+        
+        ._header {
+            background-color: lightcyan;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="ma_in">
+        <div class="_header">
+            <header>
+                <h1 class="hh1">Shop Cakes</h1>
+            </header>
+            <div class="d_2">
+                <button id="b_5" type="button" class="bt_n" onclick="redirect()">view cart</button>
+            </div>
+        </div>
+        <section class="container">
+            <div id="shop-items">
+                <div class="shop-item">
+                    <h2 class="h_2">Vanilla Cake</h2>
+                    <img class="i_mg" src="vanilla.jpg">
+                    <div class="s_2">
+                        <span class="p_1">Rs 350</span>
+                        <input type="button" id="b_1" value="Add to Cart" class="bt_n" onclick="_add('1')" />
+                    </div>
+                </div>
+                <div class="shop-item">
+                    <h2 class="h_2">Pineapple Cake</h2>
+                    <img class="i_mg" src="pineapple.png">
+                    <div class="s_2">
+                        <span class="p_1">Rs 380</span>
+                        <input type="button" n id="b_1" value="Add to Cart" class="bt_n" onclick="_add('2')" />
+                    </div>
+                </div>
+                <div class="shop-item">
+                    <h2 class="h_2">Strawberry Cake</h2>
+                    <img class="i_mg" src="strawberry cake.jpeg">
+                    <div class="s_2">
+                        <span class="p_1">Rs 400</span>
+                        <input type="button" id="b_1" value="Add to Cart" class="bt_n" onclick="_add('3')" />
+                    </div>
+                </div>
+                <div class="shop-item">
+                    <h2 class="h_2">Chocolate Cake</h2>
+                    <img class="i_mg" src="chocolate.jpeg">
+                    <div class="s_2">
+                        <span class="p_1">Rs 450</span>
+                        <input type="button" id="b_1" value="Add to Cart" class="bt_n" onclick="_add('4')" />
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>

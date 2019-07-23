@@ -1,0 +1,40 @@
+<html>
+
+<head>
+    <title>checkout page</title>
+    <script type="text/javascript">
+        const getItem = () => {
+            const _url = 'http://localhost:3369/display';
+            fetch(_url)
+                .then(res => res.json())
+                .then(items => {
+                    createTable(items);
+                })
+        }
+
+        const createTable = (data) => {
+            let rows = '';
+            data.items.forEach(u => {
+                rows += ` <tr>
+                    <td>${u.id}</td>
+                    <td>${u.name}</td>
+                    <td>${u.cost}</td>
+                    <td>${u.quantity}</td>
+                    </tr>`
+
+            });
+            const _table = `<table>
+                      <tr>
+                        <th>id</th>
+                        <th>name</th>
+                        <th>quantity</th>
+                        <th>price</th>
+                        <th>total</th>
+                        ${rows}
+                        </table>`
+            document.getElementById('items').innerHTML = _table;
+        }
+    </script>
+</head>
+
+</html>

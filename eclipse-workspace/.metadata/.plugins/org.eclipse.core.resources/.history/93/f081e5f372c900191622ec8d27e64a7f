@@ -1,0 +1,76 @@
+package comm.employee.dao;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.ResultSetMetaData;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
+
+import comm.employee.factory.MyConnectionFactory;
+import comm.employee.model.Employee;
+
+public class EmployeeDaoImpl implements EmployeeDao {
+	private MyConnectionFactory factory = null;
+	private Connection connection = null;
+	private PreparedStatement pStatement = null;
+	private Statement statement = null;
+	private ResultSet resultSet = null;
+
+	public EmployeeDaoImpl() throws SQLException {
+		super();
+		connection= MyConnectionFactory.getMySqlConnectionForHR();
+	}
+
+	@Override
+	public void createEmployee(Employee employee) {
+		try {
+			System.out.println(employee.getCountry()+","+employee.getEmail()+","+employee.getName()+","+employee.getPassword());
+			pStatement = connection.prepareStatement("insert into emp (name,email,password,country) values (?,?,?,?)");
+			pStatement.setString(1, employee.getName());
+			pStatement.setString(2, employee.getEmail());
+			pStatement.setString(3, employee.getPassword());
+			pStatement.setString(4, employee.getCountry());
+			pStatement.executeUpdate();
+
+		} catch (SQLException e) {
+			System.out.println("duplicate id");
+
+			e.printStackTrace();
+		} 
+
+		
+	}
+
+	@Override
+	public List<Employee> getAllEmployees() {
+		List<Employee> list = new ArrayList<Employee>();
+		try {
+			statement = connection.createStatement();
+			resultSet = statement.executeQuery("select * from emp");
+			
+			while (resultSet.next()) {
+				list.add(new Employee(resultSet.getString(2), resultSet.getString(3), resultSet.getString(4),
+						resultSet.getString(4)));
+			}
+
+		} catch (SQLException e) {
+
+			e.printStackTrace();
+		}
+		return list;
+	}
+
+	@Override
+	public Employee deleteEmployeeById(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	
+	
+	
+	
+}

@@ -1,0 +1,49 @@
+package comm.employee.view;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.List;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+/**
+ * Servlet implementation class ErrorView
+ */
+@WebServlet("/error.view")
+public class ErrorView extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
+    
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		doProcess(request,response);
+	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		doProcess(request, response);
+	}
+	protected void doProcess(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+
+		response.setContentType("text/html");
+		PrintWriter out = response.getWriter();
+		
+		@SuppressWarnings("unchecked")
+		List<String> err=(List<String>)request.getAttribute("ERROR");
+		for(String s:err)
+		{
+			out.println("<h1 style='color:red'>"+s+"</h1><br/>");
+		}
+			out.println("<br><a href=\"add_employee\"><button type='button'>back</button></a>");
+		
+
+}
+
+}

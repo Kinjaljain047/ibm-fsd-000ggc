@@ -1,0 +1,51 @@
+package Package2;
+
+import java.io.Serializable;
+
+public class Name implements Serializable {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -73806133576295321L;
+	private String fname;
+	private String lname;
+	
+	private static Scanner sc= new Scanner(System.in);
+	public Name() {
+		super();
+	}
+	public Name(String fname, String lname) {
+		super();
+		this.fname = fname;
+		this.lname = lname;
+	}
+	public String getFname() {
+		return fname;
+	}
+	public void setFname(String fname) {
+		this.fname = fname;
+	}
+	public String getLname() {
+		return lname;
+	}
+	public void setLname(String lname) {
+		this.lname = lname;
+	}
+	@Override
+	public String toString() {
+		return "Name [fname=" + fname + ", lname=" + lname + "]";
+	}
+	
+	public Name createName(String fname, String lname) throws NameNotValidException{
+		this.fname= fname;
+		this.lname= lname;
+		if(!(Character.isUpperCase(fname.charAt(0)) && Character.isUpperCase(lname.charAt(0)))) {
+			throw new NameNotValidException("name not valid");
+		}
+		System.out.println("valid name");
+		return new Name(fname, lname);
+	}
+	
+
+}

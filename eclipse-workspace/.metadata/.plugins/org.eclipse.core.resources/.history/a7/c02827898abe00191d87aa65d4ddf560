@@ -1,0 +1,23 @@
+package Package2;
+
+import java.util.Scanner;
+
+public class Tester {
+ public static void main(String[] args) {
+	 Scanner sc= new Scanner(System.in);
+	 Name name= new Name();
+	 Name name1= new Name();
+	 do {
+
+	 try {
+	  System.out.println("enter firstname:");
+	  name.
+	  
+	  
+	} catch (NameNotValidException e) {
+		// TODO Auto-generated catch block
+		//e.printStackTrace();
+		System.err.println(e);
+	}
+ }
+}

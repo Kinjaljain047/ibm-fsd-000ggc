@@ -1,0 +1,5 @@
+package jsocket;
+
+public class Server {
+
+}

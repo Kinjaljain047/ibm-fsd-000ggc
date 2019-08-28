@@ -1,0 +1,8 @@
+package Package2;
+
+import java.io.Serializable;
+
+public class Name implements Serializable {
+	
+
+}

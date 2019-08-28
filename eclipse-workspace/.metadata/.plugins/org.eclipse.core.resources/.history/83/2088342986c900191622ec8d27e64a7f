@@ -1,0 +1,102 @@
+package comm.employee.view;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebInitParam;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import comm.employee.dao.EmployeeDao;
+import comm.employee.dao.EmployeeDaoImpl;
+import comm.employee.model.Employee;
+
+/**
+ * Servlet implementation class EditView
+ */
+@WebServlet(
+		urlPatterns = { "/edit_view" }, 
+		initParams = { 
+				@WebInitParam(name = "country_list", value = "Select,USA,UK,INDIA,SA")
+		})
+public class EditView extends HttpServlet {
+	private String slist;
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		try {
+			doProcess(request,response);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		try {
+			doProcess(request, response);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	protected void doProcess(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException, SQLException {
+		response.setContentType("text/html");
+		PrintWriter out = response.getWriter();
+		out.println("<h3>Update Employee</h3>");
+		String sid= request.getParameter("id");
+		int id= Integer.parseInt(sid);
+		EmployeeDao emp= new EmployeeDaoImpl();
+		Employee e=emp.getEmployeeById(id);
+		List<String> err=(List<String>) request.getAttribute("ERROR");
+		if(err!=null)
+		{
+			for(String s:err)
+			{
+				out.println("<font color='red'>"+s+"</font><br/>");
+			}
+		}
+		
+		out.println("<form action='editemployee.controller' method='post'>");
+		
+		out.println("<div class=\"form-group\">");
+		out.println("<label for=\"name\">Name:</label>");
+		out.println("<input type=\"text\" class=\"form-control\" name=\"name\" placeholder=\"Enter Name\"  value="+e.getName()+">");
+		out.println("</div>");
+		
+		out.println("<div class=\"form-group\">");
+		out.println("<label for=\"email\">Email:</label>");
+		out.println("<input type=\"email\" class=\"form-control\" name=\"email\" placeholder=\"Enter Email\" value="+e.getEmail()+">");
+		out.println("</div>");
+		
+		out.println("<div class=\"form-group\">");
+		out.println("<label for=\"password\">Password:</label>");
+		out.println("<input type=\"password\" class=\"form-control\" name=\"password\" placeholder=\"Enter Password\" value="+e.getPassword()+">");
+		out.println("</div>");
+		
+		out.println("<div class=\"form-group\">");
+		out.println("<label for=\"country\">Country:</label>");
+		//String sList=getServletConfig().getInitParameter("season-list");
+		String arrSList[]=slist.split(",");
+		out.println("<select name='country'><option value='country'>"+e.getCountry()+"</option>");
+		for(String str:arrSList)
+		{
+			out.println("<option value='"+str+"'"+">"+str+"</option>");
+		}
+		out.println("</div>");
+		out.println("</select><br/><input type='submit' value='Edit'></form></body></html>");
+	
+	out.println("<br><a href=\"addemployee_view\"><button type='button'>Back</button></a>");
+
+	}
+	}
+
+

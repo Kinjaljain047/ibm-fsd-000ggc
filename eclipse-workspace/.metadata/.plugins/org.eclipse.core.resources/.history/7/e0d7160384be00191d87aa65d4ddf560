@@ -1,0 +1,14 @@
+package Package2;
+
+public class Tester {
+ public static void main(String[] args) {
+	 Name name= new Name();
+	 try {
+		name.createName("kinjal", "jain");
+	} catch (NameNotValidException e) {
+		// TODO Auto-generated catch block
+		//e.printStackTrace();
+		System.err.println(e);
+	}
+ }
+}

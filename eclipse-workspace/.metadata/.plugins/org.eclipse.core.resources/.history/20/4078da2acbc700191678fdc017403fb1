@@ -1,0 +1,5 @@
+package multicastSocket;
+
+public class MulticastChatClient {
+
+}

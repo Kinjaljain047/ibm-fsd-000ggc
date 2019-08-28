@@ -1,0 +1,47 @@
+package comm.example;
+
+import org.junit.jupiter.api.Test;
+
+import junit.framework.TestCase;
+import junit.framework.TestSuite;
+
+class TestCalculator extends TestCase {
+
+	int x;
+	int y;
+	Calculator c= new Calculator();
+	
+	public TestCalculator(String name) {
+		super(name);
+	}
+
+	@Test
+	public void testaddMethod() {
+		int x=10;
+		int y=20;
+		int result=c.addMethod(x, y);
+		assertEquals(30,result);
+	}
+	
+	@Test
+	public void testsubMethod() {
+		int x=10;
+		int y=20;
+		int result=c.subMethod(x, y);
+		assertEquals(-10,result);
+	}
+	
+	public static TestSuite createTestSuite() {
+		TestSuite testsuite= new TestSuite("All test");
+		testsuite.addTest(new TestCalculator("testaddMethod"));
+		testsuite.addTest(new TestCalculator("testsubMethod"));
+		return testsuite;
+	}
+	public static void main(String[] args) {
+		System.out.println("running the test case:");
+		junit.textui.TestRunner.run(TestCalculator.class);
+	}
+	
+	
+
+}

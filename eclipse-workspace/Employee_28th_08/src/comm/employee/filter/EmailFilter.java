@@ -26,7 +26,7 @@ import comm.employee.factory.MyConnectionFactory;
 				DispatcherType.INCLUDE, 
 				DispatcherType.ERROR
 		}
-					, urlPatterns = { "/addemployee_view" })
+					, urlPatterns = {  })
 public class EmailFilter implements Filter {
 
     /**
@@ -57,8 +57,10 @@ public class EmailFilter implements Filter {
 			chain.doFilter(request, response);
 	  }
 	} catch (SQLException e) {
-		// TODO Auto-generated catch block
+		
 		e.printStackTrace();
+		
+		
 	}
 
 	}

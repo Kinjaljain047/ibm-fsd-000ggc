@@ -1,0 +1,7 @@
+package com.ibm.fsd.my_first_maven_demo;
+
+import java.io.Serializable;
+
+public class Employee implements Serializable {
+
+}

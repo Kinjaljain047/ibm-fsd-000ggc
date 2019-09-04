@@ -1,0 +1,12 @@
+package com.luv2code.myapp.dao;
+
+import com.luv2code.entity.Instructor;
+
+public class InstructorDaoIimpl implements InstructorDAO {
+
+	public void createInstructor(Instructor instructor) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

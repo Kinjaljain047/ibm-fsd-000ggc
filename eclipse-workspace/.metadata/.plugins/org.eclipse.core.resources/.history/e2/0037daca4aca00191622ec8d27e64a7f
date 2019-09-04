@@ -1,0 +1,52 @@
+<%@page import="java.sql.ResultSet"%>
+<%@page import="java.sql.SQLException"%>
+<%@page import="java.sql.PreparedStatement"%>
+<%@page import="java.sql.Connection"%>
+<%@page import="comm.employee.factory.MyConnectionFactory"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<jsp:useBean id="u" class="comm.employee.model.User" scope="request">
+
+
+  <jsp:setProperty name="u" property="*" />
+  
+  </jsp:useBean>
+  <% 
+  Connection connection= MyConnectionFactory.getMySqlConnectionForHR();
+  PreparedStatement pst=connection.prepareStatement("select email,password from emp");
+  try{
+	  ResultSet rs=pst.executeQuery();
+	  boolean flag= false;
+	  while(rs.next()){
+		  String res=u.validate(rs.getString(1), rs.getString(2));
+		  if(res=="Valid"){
+			  flag=true;
+		  }
+	  }if(flag==true){
+		  
+	  }else{
+		  out.println("invalid user");
+	  }
+  }catch(SQLException e){
+	  e.printStackTrace();
+  }
+  %>
+  <body>
+  <br>
+  You entered email as <jsp:getProperty name="u" property="email" /> <br>
+
+  You entered user password as <jsp:getProperty name="u" property="password" /> <br>
+
+
+
+  <b>Thank You</b>
+
+</body>
+</html>

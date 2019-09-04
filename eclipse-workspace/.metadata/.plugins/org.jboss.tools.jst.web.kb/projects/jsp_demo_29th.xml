@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kb-project>
+ <depends-on-projects/>
+ <used-by-projects/>
+ <paths>
+  <path value="C:/apache-tomcat-8.5.45/lib/tomcat-coyote.jar"/>
+  <path value="E:/eclipse-workspace/jsp_demo_29th/WebContent/WEB-INF/lib/standard.jar">
+   <libraries>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-standard.jar/meta-inf/c-1_0-rt.tld" project="jsp_demo_29th"/>
+    </library>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-standard.jar/meta-inf/c-1_0.tld" project="jsp_demo_29th"/>
+    </library>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-standard.jar/meta-inf/c.tld" project="jsp_demo_29th"/>
+    </library>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-standard.jar/meta-inf/fmt-1_0-rt.tld" project="jsp_demo_29th"/>
+    </library>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-standard.jar/meta-inf/fmt-1_0.tld" project="jsp_demo_29th"/>
+    </library>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-standard.jar/meta-inf/fmt.tld" project="jsp_demo_29th"/>
+    </library>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-standard.jar/meta-inf/fn.tld" project="jsp_demo_29th"/>
+    </library>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-standard.jar/meta-inf/permittedtaglibs.tld" project="jsp_demo_29th"/>
+    </library>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-standard.jar/meta-inf/scriptfree.tld" project="jsp_demo_29th"/>
+    </library>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-standard.jar/meta-inf/sql-1_0-rt.tld" project="jsp_demo_29th"/>
+    </library>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-standard.jar/meta-inf/sql-1_0.tld" project="jsp_demo_29th"/>
+    </library>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-standard.jar/meta-inf/sql.tld" project="jsp_demo_29th"/>
+    </library>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-standard.jar/meta-inf/x-1_0-rt.tld" project="jsp_demo_29th"/>
+    </library>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-standard.jar/meta-inf/x-1_0.tld" project="jsp_demo_29th"/>
+    </library>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-standard.jar/meta-inf/x.tld" project="jsp_demo_29th"/>
+    </library>
+   </libraries>
+  </path>
+  <path value="C:/apache-tomcat-8.5.45/lib/tomcat-i18n-ja.jar"/>
+  <path value="C:/apache-tomcat-8.5.45/lib/tomcat-websocket.jar"/>
+  <path value="C:/apache-tomcat-8.5.45/lib/tomcat-jdbc.jar"/>
+  <path value="C:/apache-tomcat-8.5.45/lib/tomcat-i18n-ru.jar"/>
+  <path value="C:/apache-tomcat-8.5.45/lib/tomcat-util-scan.jar"/>
+  <path value="C:/apache-tomcat-8.5.45/lib/ecj-4.6.3.jar"/>
+  <path value="C:/apache-tomcat-8.5.45/lib/tomcat-i18n-fr.jar"/>
+  <path value="C:/apache-tomcat-8.5.45/lib/tomcat-api.jar"/>
+  <path value="C:/apache-tomcat-8.5.45/lib/catalina-ant.jar"/>
+  <path value="C:/apache-tomcat-8.5.45/lib/jasper-el.jar"/>
+  <path value="C:/apache-tomcat-8.5.45/lib/annotations-api.jar"/>
+  <path value="C:/apache-tomcat-8.5.45/lib/catalina-storeconfig.jar"/>
+  <path value="C:/apache-tomcat-8.5.45/lib/jaspic-api.jar"/>
+  <path value="C:/apache-tomcat-8.5.45/lib/servlet-api.jar"/>
+  <path value="C:/apache-tomcat-8.5.45/lib/tomcat-i18n-es.jar"/>
+  <path value="C:/apache-tomcat-8.5.45/lib/tomcat-util.jar"/>
+  <path value="C:/apache-tomcat-8.5.45/lib/tomcat-dbcp.jar"/>
+  <path value="C:/apache-tomcat-8.5.45/lib/tomcat-jni.jar"/>
+  <path value="C:/apache-tomcat-8.5.45/lib/jsp-api.jar"/>
+  <path value="C:/apache-tomcat-8.5.45/lib/websocket-api.jar"/>
+  <path value="C:/apache-tomcat-8.5.45/lib/catalina.jar"/>
+  <path value="C:/apache-tomcat-8.5.45/lib/el-api.jar"/>
+  <path value="E:/eclipse-workspace/jsp_demo_29th/WebContent/WEB-INF/lib/jstl-1.2.jar">
+   <libraries>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-jstl-1.2.jar/meta-inf/c-1_0-rt.tld" project="jsp_demo_29th"/>
+    </library>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-jstl-1.2.jar/meta-inf/c-1_0.tld" project="jsp_demo_29th"/>
+    </library>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-jstl-1.2.jar/meta-inf/c.tld" project="jsp_demo_29th"/>
+    </library>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-jstl-1.2.jar/meta-inf/fmt-1_0-rt.tld" project="jsp_demo_29th"/>
+    </library>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-jstl-1.2.jar/meta-inf/fmt-1_0.tld" project="jsp_demo_29th"/>
+    </library>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-jstl-1.2.jar/meta-inf/fmt.tld" project="jsp_demo_29th"/>
+    </library>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-jstl-1.2.jar/meta-inf/fn.tld" project="jsp_demo_29th"/>
+    </library>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-jstl-1.2.jar/meta-inf/permittedtaglibs.tld" project="jsp_demo_29th"/>
+    </library>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-jstl-1.2.jar/meta-inf/scriptfree.tld" project="jsp_demo_29th"/>
+    </library>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-jstl-1.2.jar/meta-inf/sql-1_0-rt.tld" project="jsp_demo_29th"/>
+    </library>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-jstl-1.2.jar/meta-inf/sql-1_0.tld" project="jsp_demo_29th"/>
+    </library>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-jstl-1.2.jar/meta-inf/sql.tld" project="jsp_demo_29th"/>
+    </library>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-jstl-1.2.jar/meta-inf/x-1_0-rt.tld" project="jsp_demo_29th"/>
+    </library>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-jstl-1.2.jar/meta-inf/x-1_0.tld" project="jsp_demo_29th"/>
+    </library>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-jstl-1.2.jar/meta-inf/x.tld" project="jsp_demo_29th"/>
+    </library>
+   </libraries>
+  </path>
+  <path value="C:/apache-tomcat-8.5.45/lib/catalina-tribes.jar"/>
+  <path value="C:/apache-tomcat-8.5.45/lib/catalina-ha.jar"/>
+  <path value="C:/apache-tomcat-8.5.45/lib/jasper.jar"/>
+ </paths>
+ <validation>
+  <core validator-id="jsf-verification"/>
+  <core validator-id="jboss.cdi.core"/>
+  <el>
+   <linked-el length="35" name="%0" offset="718" path="%1"/>
+   <linked-el length="17" name="%0" offset="247" path="%2"/>
+   <linked-el length="17" name="%0" offset="247" path="%3"/>
+   <linked-el length="35" name="%4" offset="718" path="%1"/>
+   <linked-el length="35" name="%5" offset="718" path="%1"/>
+   <linked-el length="17" name="%5" offset="247" path="%2"/>
+   <linked-el length="17" name="%5" offset="247" path="%3"/>
+  </el>
+ </validation>
+ <aliases>
+  <alias path="/jsp_demo_29th/WebContent/response.jsp" value="%2"/>
+  <alias path="/jsp_demo_29th/WebContent/WEB-INF/response.jsp" value="%3"/>
+  <alias path="param" value="%0"/>
+  <alias path="/jsp_demo_29th/WebContent/index.jsp" value="%1"/>
+  <alias path="fn" value="%4"/>
+  <alias path="param.username" value="%5"/>
+ </aliases>
+ <includes/>
+ <uris>
+  <uri value="http://java.sun.com/jsp/jstl/functions">
+   <prefix>fn</prefix>
+  </uri>
+  <uri value="http://java.sun.com/jsp/jstl/core">
+   <prefix>c</prefix>
+  </uri>
+  <uri value="http://java.sun.com/jstl/core">
+   <prefix>c</prefix>
+  </uri>
+ </uris>
+</kb-project>

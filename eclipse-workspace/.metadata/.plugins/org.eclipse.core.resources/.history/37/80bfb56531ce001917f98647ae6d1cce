@@ -1,0 +1,9 @@
+package com.hibernate.inheritance;
+
+public class AppTest {
+	@Test
+    public void shouldAnswerWithTrue()
+    {
+        assertTrue( true );
+    }
+}

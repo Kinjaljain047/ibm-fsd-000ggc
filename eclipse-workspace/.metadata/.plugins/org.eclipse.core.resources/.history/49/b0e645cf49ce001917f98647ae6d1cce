@@ -1,0 +1,74 @@
+package com.controller;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+import com.hibernate.inheritance.CD;
+
+/**
+ * Servlet implementation class ControllerServlet
+ */
+public class ControllerServlet extends HttpServlet {
+	
+	public void init() throws ServletException {
+		// TODO Auto-generated method stub
+		super.init();
+	}
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		try {
+			doProcess(request,response);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		try {
+			doProcess(request,response);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	protected void doProcess(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException, Exception {
+		response.setContentType("text/html");
+		PrintWriter out=response.getWriter();
+		
+		String title= request.getParameter("title");
+		double cost_= Double.parseDouble(request.getParameter("cost"));
+		
+		String date_= request.getParameter("purchase");
+		SimpleDateFormat dt= new SimpleDateFormat();
+		Date date=dt.parse("date_");
+		
+		String artist= request.getParameter("artist");
+		String choice= request.getParameter("cdType");
+		HttpSession session= request.getSession();
+		session.setAttribute("se",new CD(title,artist,new Date(),cost_));
+		if(choice.equals("international_cd")) {
+			RequestDispatcher view= request.getRequestDispatcher("international.jsp");
+			view.include(request, response);
+		}else {
+			RequestDispatcher view= request.getRequestDispatcher("specialedition.jsp");
+			view.include(request, response);
+		}
+		
+	}
+}

@@ -1,0 +1,5 @@
+package comm.employee.bean;
+
+public class MyBean {
+
+}

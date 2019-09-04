@@ -1,0 +1,26 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<form action="ControllerServlet.java" method="post">
+title<input type="text" name="title">
+artist<input type="text" name="artist">
+purchase date<input type="datetime" name="purchase">
+cost<input type="number" name="cost">
+cdtype<select name="cdtype">
+<option value="international_cd">international_cd</option>
+<option value="special_edition_cd">special_edition_cd</option>
+
+</select>
+<input type="submit" value="submit">
+
+
+</form>
+
+</body>
+</html>

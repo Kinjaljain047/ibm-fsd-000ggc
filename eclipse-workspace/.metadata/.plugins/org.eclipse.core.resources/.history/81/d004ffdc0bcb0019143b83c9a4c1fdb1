@@ -1,0 +1,60 @@
+package com.employee.dao;
+
+import java.util.List;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+
+import com.ibm.fsd.EmployeeDetails.Employee;
+
+public class EmployeeDaoImpl implements EmployeeDao {
+	
+	
+	SessionFactory factory = new Configuration()
+			.configure("hibernate.cfg.xml")
+			.addAnnotatedClass(Employee.class)
+			.buildSessionFactory();
+
+	@Override
+	public void createEmployee(Employee e) {
+		Session session= factory.openSession();
+		
+			
+			session.beginTransaction();
+			System.out.println("Saving the student...");
+			session.save(e);
+			session.getTransaction().commit();
+			System.out.println("Done!");
+		
+			factory.close();
+		
+		
+	}
+
+	@Override
+	public Employee getEmployeeById(int id) {
+		Session session= factory.openSession();
+		session.beginTransaction();
+		
+		return null;
+	}
+
+	@Override
+	public void deleteEmployee(int id) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public List<Employee> getAllEmployees() {
+		Session session= factory.openSession();
+		session.beginTransaction();
+		List<Employee> emplist = session.createQuery("from Employee").getResultList();
+		session.getTransaction().commit();
+		System.out.println("Done!");
+		//factory.close();
+		return emplist;
+	}
+
+}

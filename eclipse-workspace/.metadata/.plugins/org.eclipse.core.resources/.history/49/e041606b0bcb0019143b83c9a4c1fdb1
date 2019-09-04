@@ -1,0 +1,12 @@
+import com.employee.dao.EmployeeDao;
+import com.employee.dao.EmployeeDaoImpl;
+import com.ibm.fsd.EmployeeDetails.Employee;
+
+public class Tester {
+
+	public static void main(String[] args) {
+		Employee emp= new Employee("kinjal","jain","k@g.com");
+		EmployeeDao ed= new EmployeeDaoImpl();
+		ed.createEmployee(emp);
+	}
+}

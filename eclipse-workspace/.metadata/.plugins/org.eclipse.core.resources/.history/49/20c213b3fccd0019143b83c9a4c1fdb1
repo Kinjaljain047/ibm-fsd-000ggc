@@ -1,0 +1,80 @@
+package com.employee.dao;
+
+import java.util.List;
+
+import javax.persistence.Query;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+
+import com.ibm.fsd.EmployeeDetails.Employee;
+
+public class EmployeeDaoImpl implements EmployeeDao {
+	
+	
+	SessionFactory factory = new Configuration()
+			.configure("hibernate.cfg.xml")
+			.addAnnotatedClass(Employee.class)
+			.buildSessionFactory();
+	Session session= factory.openSession();
+
+	@Override
+	public void createEmployee(Employee e) {
+		
+		
+			
+			session.beginTransaction();
+			System.out.println("Saving the student...");
+			session.save(e);
+			session.getTransaction().commit();
+			System.out.println("Done!");
+		
+			
+		
+		
+	}
+
+	@Override
+	public Employee getEmployeeById(int id) {
+		session.beginTransaction();
+		
+		// query students
+		List<Employee> theStudents = session.createQuery("from Employee").getResultList();
+		
+		
+		
+		// query students: lastName='Doe'
+		Query query = session.createQuery("from Employee e where e.id=:id");
+		
+		theStudents=query.getResultList();
+		session.getTransaction().commit();
+		System.out.println("Done!");
+	}
+
+	@Override
+	public void deleteEmployee(int id) {
+		session.beginTransaction();
+		System.out.println("\nGetting employee with id: " + id);
+		Employee myStudent = session.get(Employee.class, id);
+		 System.out.println("Deleting student: " + id);
+		 session.delete(myStudent);
+		session.getTransaction().commit();
+		System.out.println("Done!");
+	
+
+		
+	}
+
+	@Override
+	public List<Employee> getAllEmployees() {
+		
+		session.beginTransaction();
+		List<Employee> emplist = session.createQuery("from Employee").getResultList();
+		session.getTransaction().commit();
+		System.out.println("Done!");
+		//factory.close();
+		return emplist;
+	}
+
+}

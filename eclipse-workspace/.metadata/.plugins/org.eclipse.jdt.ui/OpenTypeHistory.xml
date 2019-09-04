@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <typeInfoHistroy>
-<typeInfo handle="=Testing/src&lt;comm.example{Calculator.java[Calculator" modifiers="1" timestamp="1566798828947"/>
+<typeInfo handle="=my-first-maven-demo/C:\/Program Files\/Java\/jre1.8.0_191\/lib\/rt.jar&lt;java.io(Serializable.class[Serializable" modifiers="1537" timestamp="1561969217310"/>
+<typeInfo handle="=hibernate-integration/src\/main\/java&lt;com.luv2code.myapp.dao{InstructorDAO.java[InstructorDAO" modifiers="513" timestamp="1567486224071"/>
+<typeInfo handle="=SampleWebApplication/src\/main\/java&lt;com.luv2code.controller{MyServlet.java[MyServlet" modifiers="1" timestamp="1567493138000"/>
 </typeInfoHistroy>

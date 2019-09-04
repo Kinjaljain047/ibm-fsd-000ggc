@@ -64,7 +64,7 @@ public class AddEmployeeController extends HttpServlet {
 		}
 		
 		name= request.getParameter("name");
-		if(name.toString().length()<5) {
+		if(name.toString().length()<1) {
 			errmessage.add("name is too short");
 		}
 		

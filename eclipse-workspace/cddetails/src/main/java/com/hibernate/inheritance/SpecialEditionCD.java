@@ -1,0 +1,27 @@
+package com.hibernate.inheritance;
+
+import java.util.Date;
+
+import javax.persistence.DiscriminatorValue;
+import javax.persistence.Entity;
+@Entity
+@DiscriminatorValue("special_edition_cd")
+public class SpecialEditionCD extends CD{
+	private String newfeature;
+
+	public SpecialEditionCD() {
+	}
+
+	public SpecialEditionCD(String title, String artist, Date purchaseDate, double cost, String features) {
+		super(title, artist, purchaseDate, cost);
+		newfeature = features;
+	}
+
+	public void setNewfeature(String s) {
+		newfeature = s;
+	}
+
+	public String getNewfeature() {
+		return newfeature;
+	}
+}

@@ -13,6 +13,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import comm.employee.dao.EmployeeDao;
 import comm.employee.dao.EmployeeDaoImpl;
@@ -44,9 +45,7 @@ public class EditView extends HttpServlet {
 		}
 	}
 
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
+	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		try {
@@ -62,10 +61,13 @@ public class EditView extends HttpServlet {
 		out.println("<h3>Update Employee</h3>");
 		String sid= request.getParameter("id");
 		int id= Integer.parseInt(sid);
+		System.out.println(id);
+	    HttpSession session=request.getSession();
+		session.setAttribute("ID", id);
 		EmployeeDao emp= new EmployeeDaoImpl();
 		Employee e=emp.getEmployeeById(id);
 		System.out.println(""+e.getName()+" "+e.getEmail());
-		List<String> err=(List<String>) request.getAttribute("ERROR");
+		List<String> err=(List<String>)request.getAttribute("ERROR");
 		if(err!=null)
 		{
 			for(String s:err)
@@ -73,24 +75,19 @@ public class EditView extends HttpServlet {
 				out.println("<font color='red'>"+s+"</font><br/>");
 			}
 		}
-		
 		out.println("<form action='editemployee.controller' method='post'>");
-		
 		out.println("<div class=\"form-group\">");
 		out.println("<label for=\"name\">Name:</label>");
 		out.println("<input type=\"text\" class=\"form-control\" name=\"name\" placeholder=\"Enter Name\"  value="+e.getName()+">");
 		out.println("</div>");
-		
 		out.println("<div class=\"form-group\">");
 		out.println("<label for=\"email\">Email:</label>");
 		out.println("<input type=\"email\" class=\"form-control\" name=\"email\" placeholder=\"Enter Email\" value="+e.getEmail()+">");
 		out.println("</div>");
-		
 		out.println("<div class=\"form-group\">");
 		out.println("<label for=\"password\">Password:</label>");
 		out.println("<input type=\"password\" class=\"form-control\" name=\"password\" placeholder=\"Enter Password\" value="+e.getPassword()+">");
 		out.println("</div>");
-		
 		out.println("<div class=\"form-group\">");
 		out.println("<label for=\"country\">Country:</label>");
 		//String sList=getServletConfig().getInitParameter("season-list");
@@ -101,9 +98,9 @@ public class EditView extends HttpServlet {
 			out.println("<option value='"+str+"'"+">"+str+"</option>");
 		}
 		out.println("</div>");
-		out.println("</select><br/><input type='submit' value='Edit'></form></body></html>");
+		out.println("</select><br/><input type='submit' value='Edit'></form>");
 	
-	out.println("<br><a href=\"Login.html\"><button type='button'>Back</button></a>");
+	out.println("<br><a href=\"Login.html\"><button type='button'>Back</button></a></body></html>");
 
 	}
 	}

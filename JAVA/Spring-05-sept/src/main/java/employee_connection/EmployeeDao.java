@@ -1,0 +1,65 @@
+package employee_connection;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+import javax.sql.DataSource;
+
+public class EmployeeDao {
+
+
+	
+	private DataSource dataSource;
+	
+	
+	public DataSource getDataSource() {
+		return dataSource;
+	}
+
+
+	public void setDataSource(DataSource dataSource) {
+		this.dataSource = dataSource;
+	}
+
+
+	/*
+	 * public void createConnection() { try { Connection
+	 * connection=dataSource.getConnection();
+	 * System.out.println(connection.toString()); } catch (SQLException e) { // TODO
+	 * Auto-generated catch block e.printStackTrace(); } }
+	 */
+	
+	public void createEmployee(Employee employee)
+	{
+		try {
+			Connection connection=dataSource.getConnection();
+			PreparedStatement pst=connection.prepareStatement("insert into employee values(?,?)");
+			pst.setInt(1, employee.getId());
+			pst.setString(2, employee.getName());
+			pst.executeUpdate();
+			System.out.println("inseerted..!");
+			
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		}
+	}
+	
+	public void getEmployee(int id) {
+		try {
+			Connection connection = dataSource.getConnection();
+			Employee emp=null;
+			PreparedStatement pst=connection.prepareStatement("select * from employee where id=(?)");
+			ResultSet rs=pst.executeQuery();
+			while(rs.next()) {
+				System.out.println("id="+rs.getString(1)+",name=" +rs.getString(2)+"");
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
+}

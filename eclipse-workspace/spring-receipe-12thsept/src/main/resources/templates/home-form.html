@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+	<title>Receipe Directory</title>
+</head>
+
+<body>
+
+<div class="container">
+
+	<h3>Receipe Details</h3>
+	<hr>
+	
+	
+	
+	<table class="table table-bordered table-striped">
+		<thead class="thead-dark">
+			<tr>
+				<th>Cook Time</th>
+				<th>Description</th>
+				<th>Difficulty</th>
+				<th>Direction</th>
+				<th>PrepTime</th>
+				<th>Servings</th>
+				<th>View</th>
+				<th>Delete</th>
+				<th>Update</th>
+			</tr>
+		</thead>
+		
+		<tbody>
+			<tr th:each="tempPass : ${rrlist}">
+			
+				<td th:text="${tempPass.cooktime}" />	
+				<td th:text="${tempPass.description}" />
+				<td th:text="${tempPass.difficulty}" />
+				<td th:text="${tempPass.direction}" />
+				<td th:text="${tempPass.preptime}" />
+				<td th:text="${tempPass.servings}" />
+				<td><div class="col-small">
+				<form action="#" th:action="@{showreceipies}" method="post">
+				<input type="hidden" name="id" th:value="${tempPass.id}"/>
+				<button type="submit" class="btn btn-success btn-sm ml-3 mr-1">view</button>
+				</form>
+				</div>		
+				<td><div class="col-small">
+				<form action="#" th:action="@{deleterecipies}" method="post">
+				<input type="hidden" name="id" th:value="${tempPass.id}"/>
+				<button type="submit" class="btn btn-danger btn-sm ml-3 mr-1">delete</button>
+				</form>
+				</div>		
+				<td><div class="col-small">
+				<form action="#" th:action="@{updaterecipies}" method="post">
+				<input type="hidden" name="id" th:value="${tempPass.id}"/>
+				<button type="submit" class="btn btn-warning btn-sm ml-3 mr-1">update</button>
+				</form>
+				</div>		
+			</tr>
+		</tbody>		
+	</table>
+
+</body>
+</html>

@@ -1,0 +1,84 @@
+<div class="background row">
+    <ul>
+        <li class="title">
+            <a routerLink='../signupPaid'><img class="image" src="../../favicon.ico"> Fitness Tracker</a>
+        </li>
+
+        <li><a routerLink='../login'>Login</a></li>
+        <li><a routerLink='../signupPaid'>Sign Up</a></li>
+        <li><a routerLink='../index'>Home</a></li>
+    </ul>
+
+    <div class="form-class col-sm-6">
+        <img class="form-image " src="../../favicon.ico">
+
+        <h2 style="color: white"><b>GETTING STARTED</b></h2>
+        <br>
+        <div *ngIf="error">
+            <div class="alert alert-danger">
+                <strong style="color: black; font-size: 20px;">{{error}}</strong>
+            </div>
+        </div>
+        <form [formGroup]="registerForm" ngNativeValidate (ngSubmit)="onSubmit()">
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <label>First Name</label>
+                    <input type="text" placeholder="first name" formControlName="firstName" class="form-control" required />
+                </div>
+                <div class="form-group">
+                    <label>Last Name</label>
+                    <input type="text" placeholder="last name" formControlName="lastName" class="form-control" required />
+                </div>
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" placeholder="email" formControlName="email" class="form-control" required />
+                </div>
+                <div class="form-group">
+                    <label>Gender</label>
+                    <select formControlName="gender" class="form-control" required>
+                                            <option value="male">Male</option>
+                                            <option value="female">Female</option>
+                            
+                                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Age</label>
+                    <input type="number" placeholder="your age" formControlName="age" required class="form-control" min="13" max="45" />
+
+                </div>
+            </div>
+
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" placeholder="password" formControlName="password" required class="form-control" [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
+                    <div *ngIf="submitted && f.password.errors" class="danger invalid-feedback">
+                        <div class="danger" *ngIf="f.password.errors.required">* Password is required</div>
+                        <div class="danger" *ngIf="f.password.errors.minlength">* Password must be at least 8 characters</div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Confirm Password</label>
+                    <input type="password" placeholder="confirm password" formControlName="confirmPassword" required class="form-control" [ngClass]="{ 'is-invalid': submitted && f.confirmPassword.errors }" />
+                    <div *ngIf="submitted && f.confirmPassword.errors" class="danger invalid-feedback">
+                        <div class="danger" *ngIf="f.confirmPassword.errors.required">* Confirm Password is required</div>
+                        <div class="danger" *ngIf="f.confirmPassword.errors.mustMatch">* Passwords must match</div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Height(in cm)</label>
+                    <input type="number" placeholder="enter your height" formControlName="height" class="form-control" required min="100" />
+
+                </div>
+                <div class="form-group">
+                    <label>Weight(in kg)</label>
+                    <input type="number" placeholder="enter your weight" formControlName="weight" class="form-control" required min="30" />
+
+                </div>
+            </div>
+            <br><br>
+            <div class="form-group">
+                <button class="btn btn-primary">pay and Register</button>
+            </div>
+        </form>
+    </div>

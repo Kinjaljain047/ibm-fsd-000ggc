@@ -1,0 +1,12 @@
+package com.example.demo.entity;
+
+import javax.persistence.CascadeType;
+import javax.persistence.OneToOne;
+
+public class Product {
+
+	private Integer id;
+	
+	@OneToOne(mappedBy = "product",cascade = CascadeType.ALL)
+	private Shopping shopping;
+}

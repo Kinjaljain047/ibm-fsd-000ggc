@@ -1,5 +1,7 @@
 package jdbctemplate;
 
+import java.util.List;
+
 import org.springframework.jdbc.core.JdbcTemplate;
 
 public class EmpoyeeDao {
@@ -27,5 +29,9 @@ public class EmpoyeeDao {
 		Object obj[]= {id};
 		jdbcTemplate.update(query,obj);
 		System.out.println("done");
+	}
+	public List<Employee> getAllEmployee()
+	{
+		return jdbcTemplate.query("select * from employee", new EmployeeRowMapper());
 	}
 }

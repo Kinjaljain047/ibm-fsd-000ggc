@@ -19,6 +19,7 @@ public class App
     	 ClassPathXmlApplicationContext context=
          		new ClassPathXmlApplicationContext("applicationContext.xml");
          EmpoyeeDao dao=context.getBean("edao",EmpoyeeDao.class);
+         
         dao.createEmployee(new Employee("Sourav"));
         System.out.println("enter id to be deleted:");
         int id=sc.nextInt();

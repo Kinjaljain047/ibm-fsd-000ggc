@@ -1,0 +1,56 @@
+package com.example.demo.patientclient;
+
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.PathVariable;
+
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
+
+@Service
+public class FeignService {
+	@Autowired
+	PatientClient patientClient;
+	@Autowired
+    DoctorClient doctorClient;
+    
+	@HystrixCommand(fallbackMethod = "getPatientFallback")
+	public List<PatientData> getPatient(String disease) {
+		System.out.println("rohit");
+		return patientClient.getPatient(disease);
+	}
+
+	@HystrixCommand(fallbackMethod = " getIdFallback")
+	public Optional<PatientData> getById(Long id) {
+		return patientClient.getById(id);
+	}
+	
+	@HystrixCommand(fallbackMethod="getDoctorFallback")
+	 public List<DoctorData> getDoctors( String speciality){
+		return doctorClient.getDoctors(speciality);
+	}
+	
+	@HystrixCommand(fallbackMethod="getDoctorIdFallback")
+	 public Optional<DoctorData> getDoctorById( Long id){
+		return doctorClient.getDoctorById(id);
+	}
+
+	public String getPatientFallback(String disease) {
+		System.out.println("patient");
+		return "patient not found";
+	}
+
+	public String getIdFallback(Long id) {
+		return "patient not available";
+	}
+	
+	public String getDoctorFallback(String speciality) {
+		return "doctor not found";
+	}
+	
+	public String getDoctorIdFallback(Long id) {
+		return "doctor not available";
+	}
+}

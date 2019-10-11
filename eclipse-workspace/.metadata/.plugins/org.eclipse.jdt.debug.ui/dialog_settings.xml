@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
+	<item key="org.eclipse.jdt.debug.ui.jre_preference_page_context.columnWidth0" value="121"/>
+	<item key="org.eclipse.jdt.debug.ui.jre_preference_page_context.columnWidth1" value="194"/>
+	<item key="org.eclipse.jdt.debug.ui.jre_preference_page_context.columnWidth2" value="82"/>
+	<item key="org.eclipse.jdt.debug.ui.jre_preference_page_context.sortColumn" value="1"/>
 	<section name="org.eclipse.jdt.debug.ui.MAIN_METHOD_SELECTION_DIALOG">
 		<item key="ShowStatusLine" value="true"/>
-		<item key="History" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#x0D;&#x0A;&lt;History&gt;&#x0D;&#x0A;&lt;historyRootNode&gt;&#x0D;&#x0A;&lt;infoNode&gt;=my-first-maven-demo/src\/main\/java&amp;lt;com.ibm.fsd.my_first_maven_demo{Tester.java[Tester&lt;/infoNode&gt;&#x0D;&#x0A;&lt;/historyRootNode&gt;&#x0D;&#x0A;&lt;/History&gt;"/>
+		<item key="History" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#x0D;&#x0A;&lt;History&gt;&#x0D;&#x0A;&lt;historyRootNode&gt;&#x0D;&#x0A;&lt;infoNode&gt;=Spring-05-sept/src\/main\/java&amp;lt;com.mycompany.Spring_05_sept{App.java[App&lt;/infoNode&gt;&#x0D;&#x0A;&lt;infoNode&gt;=spring-annotation/src\/main\/java&amp;lt;com.mycompany.spring_annotation{App.java[App&lt;/infoNode&gt;&#x0D;&#x0A;&lt;infoNode&gt;=spring-boot-10thsept/src\/main\/java&amp;lt;com.example.springboot10thsept{SpringBoot10thseptApplication.java[SpringBoot10thseptApplication&lt;/infoNode&gt;&#x0D;&#x0A;&lt;infoNode&gt;=lab-7-sentence-server/src\/main\/java&amp;lt;com.example.demo{Lab7SentenceServerApplication.java[Lab7SentenceServerApplication&lt;/infoNode&gt;&#x0D;&#x0A;&lt;infoNode&gt;=lab-7-word-server/src\/main\/java&amp;lt;com.example.demo{Lab7WordServerApplication.java[Lab7WordServerApplication&lt;/infoNode&gt;&#x0D;&#x0A;&lt;/historyRootNode&gt;&#x0D;&#x0A;&lt;/History&gt;"/>
 		<section name="DialogBoundsSettings">
 			<item key="DIALOG_HEIGHT" value="500"/>
 			<item key="DIALOG_WIDTH" value="600"/>

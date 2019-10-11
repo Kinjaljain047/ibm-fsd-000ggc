@@ -1,0 +1,27 @@
+package com.example.demo.entity;
+
+import java.util.HashSet;
+import java.util.Set;
+
+import javax.persistence.CascadeType;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToMany;
+import javax.persistence.OneToOne;
+
+import org.hibernate.annotations.ManyToAny;
+
+public class Product {
+
+	private Integer id;
+	private String productName;
+	private String productType;
+	private int cost;
+	private int quantity;
+	
+	@OneToOne(mappedBy = "product",cascade = CascadeType.ALL)
+	private Shopping shopping;
+	
+	@ManyToMany
+	@JoinColumn(name="customer_id" )
+	private Set<Customer> customer = new HashSet<>();
+}

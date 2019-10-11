@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+<context:property-placeholder location="classpath:sports.properties"/>
+<bean name="theCoach" class="beans.CricketCoach">
+<property name="email" value="${foo.email}"/>
+<property name="teamname" value="${foo.teamname}"/>
+ </bean>
+<bean name="bCoach" class="beans.Basketball"></bean>
+
+
+<bean name="add" class="beans.Adress">
+		<constructor-arg name="addressLine1" value="Kolkata"/>
+		<constructor-arg name="addressLine2" value="India"/>
+	</bean>
+	<bean name="empo" class="beans.Employee">
+	
+	<constructor-arg name="address" ref="add"/>
+	<constructor-arg name="email" value="ram@gg.com"/>
+	<constructor-arg name="fname" value="ram"/>
+	<constructor-arg name="lname" value="tom"/>
+	<constructor-arg name="id" value="12"/>
+ 	</bean>
+	
+
+
+
+
+</beans>

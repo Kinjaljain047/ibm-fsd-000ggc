@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aop-reference-model>
+<aop-project name="lab-7-word-server"/>
+<aop-project name="customer-service"/>
+<aop-project name="common-config-server"/>
+<aop-project name="doctor-service"/>
+<aop-project name="paypalService"/>
+<aop-project name="Product-service"/>
+<aop-project name="common-eureka-server"/>
+<aop-project name="album-eureka-server"/>
+<aop-project name="my-gallery-service"/>
+<aop-project name="feign-service-shopping"/>
+<aop-project name="demo"/>
+<aop-project name="lab-7-sentence-server">
+<aspect-definition advice-class-name="com.netflix.hystrix.contrib.javanica.aop.aspectj.HystrixCommandAspect" advice-method-name="methodsAnnotatedWithHystrixCommand(org.aspectj.lang.ProceedingJoinPoint)" advice-type="AROUND" aspect-end-line-number="-1" aspect-name="hystrixCommandAspect" aspect-start-line-number="-1" factory-id="org.springframework.ide.eclipse.aop.core.annotationAspectDefinitionElementFactory" file="/lab-7-sentence-server/src/main/java/com/example/demo/Lab7SentenceServerApplication.java" pointcut-expression="hystrixCommandAnnotationPointcut() || hystrixCollapserAnnotationPointcut()" proxy-target-class="true">
+<aop-reference advice-type="AROUND" bean="1:BeansModel|2:lab-7-sentence-server|3:java:com.example.demo.Lab7SentenceServerApplication|8:wordServiceImpl:15" bean-file="/lab-7-sentence-server/src/main/java/com/example/demo/service/WordServiceImpl.java" bean-start-line="15" factory-id="org.springframework.ide.eclipse.aop.core.aopReferenceElementFactory" file="/lab-7-sentence-server/src/main/java/com/example/demo/Lab7SentenceServerApplication.java" source="=lab-7-sentence-server/C:\/Users\/B4ibmjava10\/.m2\/repository\/com\/netflix\/hystrix\/hystrix-javanica\/1.5.12\/hystrix-javanica-1.5.12.jar&lt;com.netflix.hystrix.contrib.javanica.aop.aspectj(HystrixCommandAspect.class[HystrixCommandAspect~methodsAnnotatedWithHystrixCommand~Lorg.aspectj.lang.ProceedingJoinPoint;" source-start-line="-1" target="=lab-7-sentence-server/src\/main\/java&lt;com.example.demo.service{WordServiceImpl.java[WordServiceImpl~getAdjective" target-start-line="41"/>
+<aop-reference advice-type="AROUND" bean="1:BeansModel|2:lab-7-sentence-server|3:java:com.example.demo.Lab7SentenceServerApplication|8:wordServiceImpl:15" bean-file="/lab-7-sentence-server/src/main/java/com/example/demo/service/WordServiceImpl.java" bean-start-line="15" factory-id="org.springframework.ide.eclipse.aop.core.aopReferenceElementFactory" file="/lab-7-sentence-server/src/main/java/com/example/demo/Lab7SentenceServerApplication.java" source="=lab-7-sentence-server/C:\/Users\/B4ibmjava10\/.m2\/repository\/com\/netflix\/hystrix\/hystrix-javanica\/1.5.12\/hystrix-javanica-1.5.12.jar&lt;com.netflix.hystrix.contrib.javanica.aop.aspectj(HystrixCommandAspect.class[HystrixCommandAspect~methodsAnnotatedWithHystrixCommand~Lorg.aspectj.lang.ProceedingJoinPoint;" source-start-line="-1" target="=lab-7-sentence-server/src\/main\/java&lt;com.example.demo.service{WordServiceImpl.java[WordServiceImpl~getNoun" target-start-line="47"/>
+<aop-reference advice-type="AROUND" bean="1:BeansModel|2:lab-7-sentence-server|3:java:com.example.demo.Lab7SentenceServerApplication|8:wordServiceImpl:15" bean-file="/lab-7-sentence-server/src/main/java/com/example/demo/service/WordServiceImpl.java" bean-start-line="15" factory-id="org.springframework.ide.eclipse.aop.core.aopReferenceElementFactory" file="/lab-7-sentence-server/src/main/java/com/example/demo/Lab7SentenceServerApplication.java" source="=lab-7-sentence-server/C:\/Users\/B4ibmjava10\/.m2\/repository\/com\/netflix\/hystrix\/hystrix-javanica\/1.5.12\/hystrix-javanica-1.5.12.jar&lt;com.netflix.hystrix.contrib.javanica.aop.aspectj(HystrixCommandAspect.class[HystrixCommandAspect~methodsAnnotatedWithHystrixCommand~Lorg.aspectj.lang.ProceedingJoinPoint;" source-start-line="-1" target="=lab-7-sentence-server/src\/main\/java&lt;com.example.demo.service{WordServiceImpl.java[WordServiceImpl~getSubject" target-start-line="25"/>
+</aspect-definition>
+</aop-project>
+<aop-project name="PROJECT_USER"/>
+<aop-project name="feign-client"/>
+<aop-project name="league-service"/>
+<aop-project name="config-server-16sept"/>
+<aop-project name="overweight-male-exercise-service"/>
+<aop-project name="feign-client-service"/>
+<aop-project name="overweight-male-meal-service"/>
+<aop-project name="commmon-eureka-server"/>
+<aop-project name="feign-doctor-patient"/>
+<aop-project name="my-image-service"/>
+</aop-reference-model>

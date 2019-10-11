@@ -2,10 +2,10 @@
 <section name="Workbench">
 	<section name="MavenProjectWizardLocationPage">
 		<list key="location">
-			<item value="E:\eclipse-workspace\hibernate-integration\index.jsp"/>
-			<item value="E:\eclipse-workspace\hibernate-integration\src\main\java\com\luv2code\myapp\controller\MyServlet.java"/>
-			<item value="E:\eclipse-workspace\hibernate-javaee-integration\src\main\webapp\index.jsp"/>
-			<item value="E:\eclipse-workspace\my-first-maven-demo"/>
+			<item value="C:\Users\B4ibmjava10\Documents\workspace-sts-3.9.9.RELEASE\spring-security-12thsept"/>
+			<item value="C:\Users\B4ibmjava10\Documents\workspace-sts-3.9.9.RELEASE\spring-mvc-customerapp-9thsept\src\main\java\comm\example\spring\controller\CustomerController.java"/>
+			<item value="C:\Users\B4ibmjava10\Documents\workspace-sts-3.9.9.RELEASE\spring-annotation\src\main\java\entity\MyDataSource.java"/>
+			<item value="C:\Users\B4ibmjava10\Documents\workspace-sts-3.9.9.RELEASE\Spring-05-sept\src\main\java\jdbctemplate\EmpoyeeDao.java"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
@@ -17,7 +17,7 @@
 		</list>
 	</section>
 	<section name="MavenProjectWizardArchetypePage">
-		<item key="catalog" value="http://repo1.maven.org/maven2/"/>
+		<item key="catalog" value="All Catalogs"/>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
 			<item value="[artifactId]-TRUNK"/>
@@ -29,13 +29,33 @@
 	</section>
 	<section name="Maven2ProjectWizardArchifactPage">
 		<list key="package">
-			<item value="com.mycompany.cddetails"/>
+			<item value="com.mycompany.player_league"/>
+			<item value="com.mycompany.spring_security_13thsept"/>
+			<item value="com.mycompany.spring_security_12thsept"/>
+			<item value="com.mycompany.spring_rest_10thsept"/>
+			<item value="com.mycompany.spring_rest"/>
+			<item value="com.mycompany.spring_demo_servlet_9thsept"/>
+			<item value="com.mycompany.spring_mvc_customerapp_9thsept"/>
+			<item value="com.mycompany.spring_demo_tags_6thsept"/>
+			<item value="com.mycompany.spring_mvc_demo_app"/>
+			<item value="com.mycompany.spring_mvc_demo_5thsept"/>
+			<item value="com.mycompany.spring_annotation"/>
 		</list>
 		<list key="groupId">
 			<item value="com.mycompany"/>
 		</list>
 		<list key="artifactId">
-			<item value="cddetails"/>
+			<item value="player-league"/>
+			<item value="spring-security-13thsept"/>
+			<item value="spring-security-12thsept"/>
+			<item value="spring-rest-10thsept"/>
+			<item value="spring-rest"/>
+			<item value="spring-demo-servlet-9thsept"/>
+			<item value="spring-mvc-customerapp-9thsept"/>
+			<item value="spring-demo-tags-6thsept"/>
+			<item value="spring-mvc-demo-app"/>
+			<item value="spring-mvc-demo-5thsept"/>
+			<item value="spring-annotation"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
@@ -69,7 +89,36 @@
 		</list>
 	</section>
 	<section name="org.eclipse.m2e.core.pom.overview">
+		<list key="ciManagementUrl">
+		</list>
+		<list key="ciManagementSystem">
+		</list>
+		<list key="issueManagementSystem">
+		</list>
+		<list key="issueManagementUrl">
+		</list>
 	</section>
 	<section name="org.eclipse.m2e.core.pom.dependencies">
+	</section>
+	<section name="MavenProjectImportWizardPage">
+		<list key="rootDirectory">
+			<item value="C:\Users\B4ibmjava10\Downloads\fitnessTracker-project-master"/>
+			<item value="C:\Users\B4ibmjava10\Downloads\fitnessTracker-project-master (2)\fitnessTracker-project-master\MICROSERVICES\eureka-server"/>
+			<item value="C:\Users\B4ibmjava10\Downloads\fitnessTracker-project-master (2)\fitnessTracker-project-master\MICROSERVICES"/>
+			<item value="C:\Users\B4ibmjava10\Documents\workspace-sts-3.9.9.RELEASE\fitnessTracker-project-master\MICROSERVICES"/>
+			<item value="C:\Users\B4ibmjava10\Documents\workspace-sts-3.9.9.RELEASE\fitnessTracker-project-master"/>
+			<item value="C:\Users\B4ibmjava10\Documents\workspace-sts-3.9.9.RELEASE\Product-service"/>
+			<item value="C:\Users\B4ibmjava10\Downloads\ibm-fsd-000gem-master\ibm-fsd-000gem-master\Spring_Microservices\Product-service"/>
+			<item value="C:\Users\B4ibmjava10\Downloads\fitnessTracker-project-master (1)\fitnessTracker-project-master\MICROSERVICES\eureka-server"/>
+			<item value="C:\Users\B4ibmjava10\Downloads\spring-boot-10thsept"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
 	</section>
 </section>

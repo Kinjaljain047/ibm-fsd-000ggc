@@ -1,0 +1,8 @@
+comm\spring\CustomerService.class
+comm\spring\CustomerController.class
+comm\spring\CustomerDao.class
+comm\spring\ServletInitializer.class
+comm\spring\CustomerServiceImpl.class
+comm\spring\Customer.class
+comm\spring\CustomerDaoImpl.class
+comm\spring\CustomerConfig.class

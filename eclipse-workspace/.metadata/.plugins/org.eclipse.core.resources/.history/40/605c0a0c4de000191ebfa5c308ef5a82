@@ -1,0 +1,27 @@
+package com.example.demo.entity;
+
+import java.util.HashSet;
+import java.util.Set;
+
+import javax.persistence.CascadeType;
+import javax.persistence.ManyToMany;
+import javax.persistence.OneToOne;
+
+public class Customer {
+	
+	
+  private Long id;
+   private String firstName;
+   private String lastName;
+   private String email;
+   private String password;
+   private String address;
+   private int contact;
+   
+   @OneToOne(mappedBy = "customer",cascade = CascadeType.ALL)
+   private Shopping shopping;
+  
+   @ManyToMany(mappedBy = "customer1")
+   private Set<Product> product=new HashSet<>();
+
+}

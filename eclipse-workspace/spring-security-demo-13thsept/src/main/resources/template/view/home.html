@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+     Required meta tags 
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+     Bootstrap CSS 
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+	<title>Employee Directory</title>
+</head>
+
+<body>
+
+
+
+ <div class="container"> 
+
+ 	<h3>Employee List</h3> 
+ 	<hr> 
+	
+	
+	<a th:href="@{/add}"
+	class="btn btn-primary btn-lg-mb-3">Add Employee</a>
+ 	<table class="table table-bordered table-striped"> 
+ 		<thead class="thead-dark"> 
+ 			<tr> 
+ 		<!-- 		<th>Employee Type</th> -->
+ 				<th>Name</th> 
+ 				<th>Email</th> 
+ 				<!-- <th>Contract_period</th>
+ 				<th>Hourly_paid</th> 
+ 				<th>Salary</th> 
+ 				<th>Commission</th>   -->
+ 			</tr> 
+ 		</thead> 
+		
+ 		<tbody> 
+ 			<tr th:each="em : ${elist}"> 
+ 			     <!-- <td th:text="${em.Employee_Type}" />	 --> 
+ 				<td th:text="${em.name}" />	 
+ 				<td th:text="${em.email}" /> 
+ 				<!-- <td th:text="${em.contract_period}" />
+ 				<td th:text="${em.hourly_paid}" /> 
+ 				<td th:text="${em.salary}" /> 
+ 				<td th:text="${em.commission}" /> -->		 
+ 				  
+ 			</tr> 
+ 		</tbody>		 
+ 	</table> 
+ 	<h3>Regular Employee List</h3> 
+ 	<hr> 
+	
+	
+	
+ 	<table class="table table-bordered table-striped"> 
+ 		<thead class="thead-dark"> 
+ 			<tr> 
+ 		<!-- 		<th>Employee Type</th> -->
+ 				<th>Name</th> 
+ 				<th>Email</th> 
+ 				 <!-- <th>Contract_period</th>
+ 				<th>Hourly_paid</th>  -->
+ 				<th>Salary</th> 
+ 				<th>Commission</th>   
+ 			</tr> 
+ 		</thead> 
+		
+ 		<tbody> 
+ 			<tr th:each="em : ${rrlist}"> 
+ 			     <!-- <td th:text="${em.Employee_Type}" />	 --> 
+ 				<td th:text="${em.name}" />	 
+ 				<td th:text="${em.email}" /> 
+ 			  <!--  <td th:text="${em.contract_period}" />
+ 				<td th:text="${em.hourly_paid}" />  -->
+ 				<td th:text="${em.salary}" /> 
+ 				<td th:text="${em.commission}" />		 
+ 				  
+ 			</tr> 
+ 		</tbody>		 
+ 	</table> 
+ 	</table> 
+ 	<h3>Contractual Employee List</h3> 
+ 	<hr> 
+	
+	
+	
+ 	<table class="table table-bordered table-striped"> 
+ 		<thead class="thead-dark"> 
+ 			<tr> 
+ 		<!-- 		<th>Employee Type</th> -->
+ 				<th>Name</th> 
+ 				<th>Email</th> 
+ 				  <th>Contract_period</th>
+ 				<th>Hourly_paid</th>  
+ 				<!-- <th>Salary</th> 
+ 				<th>Commission</th>  -->  
+ 			</tr> 
+ 		</thead> 
+		
+ 		<tbody> 
+ 			<tr th:each="em : ${cclist}"> 
+ 			     <!-- <td th:text="${em.Employee_Type}" />	 --> 
+ 				<td th:text="${em.name}" />	 
+ 				<td th:text="${em.email}" /> 
+ 			    <td th:text="${em.contract_period}" />
+ 				<td th:text="${em.hourly_paid}" />  
+ 				<!-- <td th:text="${em.salary}" /> 
+ 				<td th:text="${em.commission}" /> -->		 
+ 				  
+ 			</tr> 
+ 		</tbody>		 
+ 	</table> 
+ 	
+ 	</div> 
+</body>
+</html>
